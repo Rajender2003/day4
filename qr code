@@ -1,0 +1,10 @@
+!pip install qrcode
+print("installed qrcode")
+import qrcode
+qr=qrcode.QRCode()
+a="tvk is firing"
+qr.add_data(a)
+qr.make(fit=True)
+res=qr.make_image(fill_color="black",back_color="white")
+res.save("tvk.png")
+print("created tvk")
